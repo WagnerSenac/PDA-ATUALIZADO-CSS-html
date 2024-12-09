@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6f9;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between; /* Garante que o conteúdo seja distribuído corretamente */
+}
+
+/* Container comum para alinhar elementos */
+.container {
+    width: 100%;
+    max-width: 800px; /* Largura máxima do contêiner */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4caf50; /* Cor mais vibrante */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espaço de 20px entre o cabeçalho e o conteúdo */
+    width: 90%; /* Largura reduzida */
+    max-width: 680px; /* Largura máxima do cabeçalho */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header .container {
+    width: 100%; 
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 15px;
+    background-color: #3c7a3f;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover {
+    background-color: #91e287;
+}
+
+/* Estilo principal do formulário */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.02); /* Efeito de escala suave ao passar o mouse */
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4caf50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+}
+
+form button {
+    width: 100%;
+    padding: 16px;
+    background-color: #4caf50;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #20db0fc7;
+}
+
+form button:active {
+    background-color: #46e94e;
+}
+
+/* Rodapé */
+footer {
+    background-color: #fdfafa;
+    color: #485258;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
