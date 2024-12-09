@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área da ONG</title>
+    <!--Adicione aqui links para estilos CSS ou bibliotecas, se necessário -->
+   
+    <style>
+       
+   
+        .contato-container {
+            display: none; /* Esconde a área de contato inicialmente */
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Área da ONG</h1>
+        <p>Bem-vindo, {{ session['nome'] }}</p> <!-- Exibe o nome da ONG logada -->
+        <a href="/logout">Sair</a>
+    </header>
+
+    <main>
+        <!-- Lista de Doações Disponíveis -->
+        <section>
+            <h2>Doações Disponíveis</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Descrição</th>
+                        <th>Localização</th>
+                        <th>Contato</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for doacao in doacoes_disponiveis %}
+                    <tr>
+                        <td>{{ doacao.tipo }}</td>
+                        <td>{{ doacao.descricao }}</td>
+                        <td>{{ doacao.localizacao }}</td>
+                        <td>
+                            <button onclick="mostrarContato('{{ doacao.restaurante_email }}', '{{ doacao.restaurante_telefone }}')">
+                                Contato
+                            </button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contatos do Restaurante -->
+        <section class="contato-container" id="contato-container">
+            <h3>Contato do Restaurante</h3>
+            <p><strong>Email:</strong> <span id="restaurante-email"></span></p>
+            <p><strong>Telefone:</strong> <span id="restaurante-telefone"></span></p>
+            <button onclick="esconderContato()">Fechar</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Sistema de Doações - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Mostra a área de contato com os detalhes do restaurante
+        function mostrarContato(email, telefone) {
+            document.getElementById('restaurante-email').innerText = email;
+            document.getElementById('restaurante-telefone').innerText = telefone;
+            document.getElementById('contato-container').style.display = 'block';
+        }
+
+        // Esconde a área de contato
+        function esconderContato() {
+            document.getElementById('contato-container').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
