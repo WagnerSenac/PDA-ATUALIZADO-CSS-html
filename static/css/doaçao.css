@@ -1,0 +1,141 @@
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4caf50; /* Cor mais vibrante */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Espaço de 20px entre o cabeçalho e o conteúdo */
+    width: 90%; /* Largura reduzida */
+    max-width: 870px; /* Largura máxima do cabeçalho */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 5px 15px;
+    background-color: #3c7a3f;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header a:hover {
+    background-color: #91e287;
+}
+
+/* Formulário principal */
+main {
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: scale(1.02);
+}
+
+label {
+    font-size: 1rem;
+    color: #555;
+}
+
+input,
+select,
+textarea {
+    padding: 0.75rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #5f7481;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+button {
+    background-color: #1dac24;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #43d643;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background-color: #f1f1f1;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    button {
+        padding: 0.75rem;
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
